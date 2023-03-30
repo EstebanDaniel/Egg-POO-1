@@ -55,16 +55,13 @@ public class Libro {
     }
     
     
-    public static void cargarLibro(Libro libro){
+    public void cargarLibro(Libro libro){
      Scanner leer = new Scanner(System.in);
         System.out.println("ingrese ISBN, titulo, autor y num de paginas");
-        int ISBN = leer.nextInt();
-        String titulo = leer.next();
-        String autor = leer.next();
-        int numPag = leer.nextInt();
-        
-        libro.setISBN(ISBN); libro.setTitulo(titulo); libro.setAutor(autor); libro.setNumeroPag(numPag);
-        
+         libro.setISBN(leer.nextInt());
+        libro.setTitulo(leer.next());
+        libro.setAutor(leer.next());
+         libro.setNumeroPag(leer.nextInt()); 
     }
 
     @Override
