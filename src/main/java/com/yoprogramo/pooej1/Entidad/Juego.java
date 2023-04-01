@@ -36,14 +36,23 @@ public class Juego {
     
     public void iniciar_juego(){
         int cont = 3;
-        Scanner leer = new Scanner(System.in);
+        int ganador1=0,ganador2=0;
+        int intentos = 3;
+        Scanner leer = new Scanner(System.in); 
        
-        System.out.println("jugador 1 inserte el numero a adivinar");
+
+        for (int i = 0; i < intentos; i++) {
+            
+              System.out.println("jugador 1 inserte el numero a adivinar");
         this.numero = leer.nextInt();
-         while(cont != 0){
+         
+        
         System.out.println("jugador 2 intente adivinar el numero, tiene 3 intentos");
+        
+        while(cont != 0){
         this.adivinar = leer.nextInt();
-        if(this.numero != this.adivinar){ 
+        
+        if(this.numero != adivinar){ 
             cont--;
             System.out.println("le quedan "+cont+ " intentos");
             
@@ -56,9 +65,32 @@ public class Juego {
         else{
             System.out.println("Adivinaste el numero era "+numero);  
             cont = 0;
+            ganador2++;
+            
         }
-             System.out.println("Fin del juego");
+        
+        if(cont == 0){ 
+        ganador1++;
+        
         }
+                       
+  
+           }
+            cont = 3;
+        }
+        
+        System.out.println("el ganador 1 gano: "+ganador1+ " veces");
+         System.out.println("el ganador 2 gano: "+ganador2+ " veces");
+           if(ganador1 > ganador2){
+               System.out.println("el ganador uno es el vencedor!!");
+           }else{
+               System.out.println("]El ganador 2 es el vencedor!!");
+           }      
+            
+        }
+                
     }
+        
     
-}
+    
+
