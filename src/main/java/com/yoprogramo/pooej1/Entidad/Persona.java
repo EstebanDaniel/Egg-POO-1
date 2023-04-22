@@ -4,6 +4,8 @@
  */
 package com.yoprogramo.pooej1.Entidad;
 
+import java.util.Date;
+
 /**
  *
  * @author USURIO
